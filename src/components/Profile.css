@@ -1,0 +1,10 @@
+.app-main {
+  grid-area: main;
+  height: 100vh;
+  background-color: rgba(197, 194, 194, 0.4);
+}
+
+.app-main img {
+  box-shadow: 12px 29px 81px 0px rgba(0, 0, 0, 0.75);
+  height: 20vh;
+}
