@@ -1,0 +1,7 @@
+.mainProfileBG img {
+  box-shadow: 12px 29px 81px 0px rgba(0, 0, 0, 0.75);
+  max-height: 300px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}

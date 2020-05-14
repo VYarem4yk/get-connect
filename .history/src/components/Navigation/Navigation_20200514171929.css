@@ -1,0 +1,18 @@
+.app-navigation {
+  grid-area: navigation;
+  background-color: rgba(197, 194, 194, 0.4);
+}
+.nav-components {
+  list-style: none;
+  padding: 20;
+}
+
+.nav-component a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-component a.active {
+  color: gold;
+  font-family: Logo;
+}

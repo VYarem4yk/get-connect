@@ -1,0 +1,14 @@
+.dialogs {
+  padding-left: 10px;
+  display: grid;
+  grid-template-areas: ;
+}
+
+.dialog a.active {
+  color: gold;
+}
+
+.dialog a {
+  text-decoration: none;
+  color: white;
+}

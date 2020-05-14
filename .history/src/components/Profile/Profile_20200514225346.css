@@ -1,0 +1,30 @@
+.profileBG {
+  width: 100%;
+  grid-area: 1/1/3/4;
+}
+.profileBG img {
+  width: 100%;
+  height: 300px;
+}
+
+.profileContent {
+  padding-top: 150px;
+  padding-left: 10px;
+  grid-area: 1/1/3/2;
+}
+
+.profileAvatar img {
+  max-width: 230px;
+  max-height: 320px;
+}
+
+.profileWrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 8fr;
+  grid-template-rows: 150px 150px 150px;
+  width: 100%;
+}
+
+.profileInformation {
+  grid-area: 2/2/4/3;
+}

@@ -1,0 +1,31 @@
+.profileBG {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+.profileBG img {
+  box-shadow: 12px 29px 81px 5px rgba(0, 0, 0, 0.75);
+  width: 100%;
+}
+
+.profileContent {
+  position: relative;
+  z-index: 1;
+  padding-top: 150px;
+  padding-left: 10px;
+}
+
+.profileAvatar img {
+  width: 230px;
+  height: 328px;
+  box-shadow: inset 0px 0px 62px 12px #000000;
+}
+
+.profileWrapper {
+  width: 100%;
+}
+
+.app-main {
+  width: 100%;
+  position: relative;
+}

@@ -1,0 +1,20 @@
+.dialogs {
+  padding-left: 10px;
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+}
+
+.dialog a.active {
+  color: gold;
+}
+
+.dialog a {
+  text-decoration: none;
+  color: white;
+}
+
+.chatBar {
+  grid-area: 1/2/2/3;
+  border: 1px solid black;
+  pa
+}

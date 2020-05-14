@@ -1,0 +1,11 @@
+.app-navigation {
+  grid-area: navigation;
+  background-color: rgba(197, 194, 194, 0.4);
+}
+.nav-components {
+  list-style: none;
+}
+
+.nav-components {
+  color: white;
+}
