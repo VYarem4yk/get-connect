@@ -7,17 +7,13 @@ const Message = (props) => {
   );
 };
 
-const Dialog = () => {
+const Dialog = (props) => {
   return (
     <div className="dialogWrapper">
       <div className="chatWrapper">
-        <Message messageWriter="messageYour" messageText="Хай" />
-        <Message messageWriter="messageRespondent" messageText="Как дела?" />
-        <Message
-          messageWriter="messageYour"
-          messageText="Нормально, как сам?"
-        />
-        <Message messageWriter="messageRespondent" messageText="Тоже норм" />
+        {props.DialogData.map(({ text, owner }) => (
+          <Message messageWriter={owner} messageText={text} />
+        ))}
       </div>
       <div className="inputMessage"></div>
     </div>

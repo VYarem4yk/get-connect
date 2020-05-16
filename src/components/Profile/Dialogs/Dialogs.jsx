@@ -13,20 +13,18 @@ const DialogItem = (props) => {
 };
 
 const Dialogs = (props) => {
+  let { respondetsList, DialogData } = props;
+
   return (
     <div className="dialogs">
       <div className="dialogWrapper">
-        <DialogItem id="Katarzyna" name="Katarzyna" />
-        <DialogItem id="Igor" name="Igor" />
-        <DialogItem id="Roma" name="Roma" />
-        <DialogItem id="Alena" name="Alena" />
-        <DialogItem id="Artem" name="Artem" />
-        <DialogItem id="Natasha" name="Natasha" />
-        <DialogItem id="Lesha" name="Lesha" />
+        {respondetsList.map(({ id, name }) => {
+          return <DialogItem id={id} name={name} />;
+        })}
       </div>
 
       <div className="chatBar">
-        <Dialog />
+        <Dialog DialogData={DialogData} />
       </div>
     </div>
   );

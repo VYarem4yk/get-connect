@@ -5,7 +5,10 @@ const ProfileInfo = () => {
   return (
     <div className="profileWrapper">
       <div className="profileBG">
-        <img src="https://www.itl.cat/pngfile/big/205-2054551_new-york-city-desktop-wallpapers-4k-ultra-hd.jpg"></img>
+        <img
+          src="https://www.itl.cat/pngfile/big/205-2054551_new-york-city-desktop-wallpapers-4k-ultra-hd.jpg"
+          alt="profileBG"
+        ></img>
       </div>
       <div className="profileContent">
         <div className="profileAvatar">
