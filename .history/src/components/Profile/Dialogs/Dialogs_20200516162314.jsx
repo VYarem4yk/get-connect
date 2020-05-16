@@ -23,8 +23,7 @@ const Dialogs = (props) => {
         <DialogItem id="Artem" name="Artem" />
         <DialogItem id="Natasha" name="Natasha" />
         <DialogItem id="Lesha" name="Lesha" />
-      </div>
-
+        
       <div className="chatBar">
         <Dialog />
       </div>

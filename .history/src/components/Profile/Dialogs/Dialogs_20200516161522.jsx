@@ -23,6 +23,24 @@ const Dialogs = (props) => {
         <DialogItem id="Artem" name="Artem" />
         <DialogItem id="Natasha" name="Natasha" />
         <DialogItem id="Lesha" name="Lesha" />
+        <div className="dialog">
+          <NavLink to="/dialogs/Igor">Игорь</NavLink>
+        </div>
+        <div className="dialog">
+          <NavLink to="/dialogs/Roma">Рома</NavLink>
+        </div>
+        <div className="dialog">
+          <NavLink to="/dialogs/Alena">Алена</NavLink>
+        </div>
+        <div className="dialog">
+          <NavLink to="/dialogs/Artem">Артем</NavLink>
+        </div>
+        <div className="dialog">
+          <NavLink to="/dialogs/Natasha">Наташа</NavLink>
+        </div>
+        <div className="dialog">
+          <NavLink to="/dialogs/Lesha">Лёша</NavLink>
+        </div>
       </div>
 
       <div className="chatBar">

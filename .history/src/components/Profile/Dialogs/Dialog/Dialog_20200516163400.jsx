@@ -3,7 +3,7 @@ import "./Dialog.css";
 
 const Message = (props) => {
   return (
-    <div className={`${props.messageWriter} message`}>{props.messageText}</div>
+    <div className={props.messageWriter + "message"}>{props.messageText}</div>
   );
 };
 

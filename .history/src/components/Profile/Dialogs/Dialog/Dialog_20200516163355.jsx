@@ -3,7 +3,7 @@ import "./Dialog.css";
 
 const Message = (props) => {
   return (
-    <div className={`${props.messageWriter} message`}>{props.messageText}</div>
+    <div className={props.messageWriter + "message"}>{props.messageText}</div>
   );
 };
 
@@ -13,11 +13,12 @@ const Dialog = () => {
       <div className="chatWrapper">
         <Message messageWriter="messageYour" messageText="Хай" />
         <Message messageWriter="messageRespondent" messageText="Как дела?" />
-        <Message
-          messageWriter="messageYour"
-          messageText="Нормально, как сам?"
-        />
+        <Message messageWriter="messageYour" messageText="Нормально, как сам?" />
         <Message messageWriter="messageRespondent" messageText="Тоже норм" />
+        
+        <div className="messageYour message">Как дела?</div>
+        <div className="messageRespondent message">Нормально, как сам?</div>
+        <div className="messageYour message">Тоже норм</div>
       </div>
       <div className="inputMessage"></div>
     </div>
