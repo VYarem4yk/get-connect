@@ -1,0 +1,15 @@
+.textareaPost {
+  max-height: 50px;
+  min-height: 50px;
+  font-size: 2.5vh;
+  border: 
+}
+
+.myPosts {
+  padding: 10px;
+}
+
+.makePost {
+  display: flex;
+  align-items: flex-end;
+}

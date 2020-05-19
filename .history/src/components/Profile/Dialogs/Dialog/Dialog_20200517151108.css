@@ -1,0 +1,23 @@
+.messageYour {
+  background-color: rgb(184, 181, 147);
+  align-self: start;
+  justify-self: start;
+}
+.messageRespondent {
+  background-color: rgb(224, 180, 113);
+  align-self: end;
+  justify-self: start;
+}
+
+.message {
+  width: fit-content;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 30px;
+}
+
+.chatWrapper {
+  display: flex;
+  flex-direction: column;
+}

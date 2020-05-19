@@ -1,0 +1,14 @@
+.friend {
+  margin: 0 auto;
+}
+
+.friendName {
+  margin: 0 auto;
+  font-size: 10px;
+}
+
+.friendAva {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

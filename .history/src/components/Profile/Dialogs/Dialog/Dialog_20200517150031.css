@@ -1,0 +1,17 @@
+.messageYour {
+  background-color: rgb(184, 181, 147);
+  align: 
+
+}
+.messageRespondent {
+  background-color: rgb(224, 180, 113);
+}
+
+
+.message {
+  width: fit-content;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 30px;
+}

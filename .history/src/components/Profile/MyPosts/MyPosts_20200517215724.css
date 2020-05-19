@@ -1,0 +1,14 @@
+.textareaPost {
+  max-height: 50px;
+
+  min-height: 50px;
+  font-size: 2.5vh;
+}
+
+.myPosts {
+  padding: 10px;
+}
+
+.makePost{
+  
+}

@@ -1,0 +1,23 @@
+body {
+  background-image: url("https://www.setaswall.com/wp-content/uploads/2017/03/Artistic-4K-Wallpaper-3840x2160.jpg");
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.app-wrapper {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "navigation main";
+  grid-template-rows: 75px 1fr;
+  grid-template-columns: 1fr 8fr;
+  grid-gap: 8px;
+  width: 900px;
+}
+
+.app-content-wrapper {
+  grid-area: main;
+  background-color: rgba(197, 194, 194, 0.4);
+}

@@ -1,0 +1,22 @@
+.messageYour {
+  background-color: rgb(184, 181, 147);
+  grid-column-start: 2;
+  grid-row: 1;
+}
+.messageRespondent {
+  background-color: rgb(224, 180, 113);
+  grid-column-start: 3;
+}
+
+.message {
+  width: fit-content;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 30px;
+}
+
+.chatWrapper {
+  display: grid;
+  grid-template-columns: 5% 45% 45% 5%;
+}

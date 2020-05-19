@@ -1,0 +1,30 @@
+.textareaPost {
+  font-size: 2vh;
+  border-radius: 10px;
+  resize: none;
+  background-color: rgba(124, 121, 121, 0.1);
+  outline: none;
+  color: white;
+  width: 100%;
+  margin-right: 10px;
+  height: 100%;
+  padding: 0;
+}
+
+.myPosts {
+  padding: 10px;
+}
+
+.makePost {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 30px;
+}
+
+.addPostBTN {
+  border-radius: 10px;
+  background-color: rgba(124, 121, 121, 0.1);
+  outline: none;
+  color: white;
+}
