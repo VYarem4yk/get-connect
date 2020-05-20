@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Navigation from "./components/Navigation/Navigation";
 import Profile from "./components/Profile/Profile";
-import Dialogs from "./components/Profile/Dialogs/Dialogs";
+import DialogsContainer from "./components/Profile/Dialogs/DialogsContainer";
 import Music from "./components/Profile/Music/Music";
 import News from "./components/Profile/News/News";
 import Settings from "./components/Profile/Settings/Settings";
@@ -14,16 +14,10 @@ function App(props) {
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
-        <Navigation store={props.store} />
+        <Navigation />
         <div className="app-content-wrapper">
-          <Route
-            path="/profile"
-            render={() => <Profile store={props.store} />}
-          />
-          <Route
-            path="/dialogs"
-            render={() => <Dialogs store={props.store} />}
-          />
+          <Route path="/profile" render={() => <Profile />} />
+          <Route path="/dialogs" render={() => <DialogsContainer />} />
           <Route path="/news" render={() => <News />} />
           <Route path="/music" render={() => <Music />} />
           <Route path="/settings" render={() => <Settings />} />

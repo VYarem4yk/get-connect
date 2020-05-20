@@ -5,16 +5,17 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import StoreContext from "./StoreContext";
+import { BrowserRouter } from "react-router-dom";
 
 let rerenderEntireTree = () => {
   ReactDOM.render(
-    <React.StrictMode>
-      <App
-        state={store.getState()}
-        store={store}
-        dispatch={store.dispatch.bind(store)}
-      />
-    </React.StrictMode>,
+    <BrowserRouter>
+      <StoreContext.Provider value={store}>
+        <App />
+      </StoreContext.Provider>
+    </BrowserRouter>,
+
     document.getElementById("root")
   );
 };

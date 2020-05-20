@@ -10,11 +10,9 @@ const Dialog = (props) => {
   return (
     <div className="dialogWrapper">
       <div className="chatWrapper">
-        {props.store
-          .getState()
-          .dialogsPage.DialogData.map(({ text, owner }) => (
-            <Message messageWriter={owner} messageText={text} />
-          ))}
+        {props.dialog.map(({ text, owner }) => (
+          <Message messageWriter={owner} messageText={text} />
+        ))}
       </div>
       <div className="inputMessage"></div>
     </div>
