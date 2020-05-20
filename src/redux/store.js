@@ -1,19 +1,6 @@
-export const ADD_POST_ACTION_CREATOR = () => ({ type: "ADD-POST" });
-export const TEXT_POST_CHANGE_ACTION_CREATOR = (text) => ({
-  type: "TEXT-POST-CHANGE",
-  newText: text,
-});
-
-export const UPDATE_TEXT_MESSAGE_CREATOR = (body) => ({
-  type: "UPDATE-TEXT-MESSAGE",
-  body: body,
-});
-export const SEND_MESSAGE_CREATOR = () => ({ type: "SEND-MESSAGE" });
-
-const ADD_POST = "ADD-POST";
-const TEXT_POST_CHANGE = "TEXT-POST-CHANGE";
-const UPDATE_TEXT_MESSAGE = "UPDATE-TEXT-MESSAGE";
-const SEND_MESSAGE = "SEND-MESSAGE";
+import profileReducer from "./profileReducer";
+import dialogsReducer from "./dialogsReducer";
+import friendsReducer from "./friendsReducer";
 
 export let store = {
   _callSubscriber() {
@@ -61,8 +48,9 @@ export let store = {
         { id: "4", text: "Тоже норм", owner: "messageRespondent" },
         { id: "5", text: "Крутяк", owner: "messageYour" },
       ],
+      curentMessageText: "",
     },
-    curentMessageText: "",
+
     friends: [
       {
         friendId: 1,
@@ -110,30 +98,10 @@ export let store = {
   },
 
   dispatch(action) {
-    if (action.type === ADD_POST) {
-      let newPost = {
-        id: "5",
-        postText: this._state.profilePage.curentPostText,
-        likes: "0",
-      };
-      this._state.profilePage.PostData.unshift(newPost);
-      this._state.profilePage.curentPostText = "";
-      this._callSubscriber(this._state);
-    } else if (action.type === TEXT_POST_CHANGE) {
-      this._state.profilePage.curentPostText = action.newText;
-      this._callSubscriber(this._state);
-    } else if (action.type === UPDATE_TEXT_MESSAGE) {
-      this._state.curentMessageText = action.body;
-      this._callSubscriber(this._state);
-    } else if (action.type === SEND_MESSAGE) {
-      let newMessage = {
-        id: "6",
-        text: this._state.curentMessageText,
-        owner: "messageYour",
-      };
-      this._state.dialogsPage.DialogData.push(newMessage);
-      this._state.curentMessageText = "";
-      this._callSubscriber(this._state);
-    }
+    this._state.profilePage = profileReducer(this._state.profilePage, action);
+    this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+    this._state.friends = friendsReducer(this._state.friends, action);
+
+    this._callSubscriber(this._state);
   },
 };

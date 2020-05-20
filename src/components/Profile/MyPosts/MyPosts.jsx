@@ -1,20 +1,20 @@
 import React from "react";
 import "./MyPosts.css";
 import Post from "./Post/Post";
-import { ADD_POST_ACTION_CREATOR } from "../../../redux/store";
-import { TEXT_POST_CHANGE_ACTION_CREATOR } from "../../../redux/store";
+import { addPostActionCreator } from "../../../redux/profileReducer";
+import { textPostChangeCreator } from "../../../redux/profileReducer";
 
 const MyPosts = (props) => {
   let newPostElement = React.createRef();
 
   let addPostClick = () => {
-    props.store.dispatch(ADD_POST_ACTION_CREATOR());
+    props.store.dispatch(addPostActionCreator());
   };
 
   let textChange = () => {
     let text = newPostElement.current.value;
 
-    props.store.dispatch(TEXT_POST_CHANGE_ACTION_CREATOR(text));
+    props.store.dispatch(textPostChangeCreator(text));
   };
 
   return (

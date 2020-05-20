@@ -2,8 +2,8 @@ import React from "react";
 import "./Dialogs.css";
 import { NavLink } from "react-router-dom";
 import Dialog from "./Dialog/Dialog";
-import { UPDATE_TEXT_MESSAGE_CREATOR } from "../../../redux/store";
-import { SEND_MESSAGE_CREATOR } from "../../../redux/store";
+import { updateTextMessageCreator } from "../../../redux/dialogsReducer";
+import { sendMessageCreator } from "../../../redux/dialogsReducer";
 
 const DialogItem = (props) => {
   let path = "/dialogs/" + props.id;
@@ -18,12 +18,12 @@ const Dialogs = (props) => {
   let state = props.store.getState();
   let textMessageChange = (event) => {
     let body = event.target.value;
-    props.store.dispatch(UPDATE_TEXT_MESSAGE_CREATOR(body));
+    props.store.dispatch(updateTextMessageCreator(body));
     debugger;
   };
-  let curentMessageText = state.curentMessageText;
+  let curentMessageText = state.dialogsPage.curentMessageText;
   let sendMessage = () => {
-    props.store.dispatch(SEND_MESSAGE_CREATOR());
+    props.store.dispatch(sendMessageCreator());
   };
 
   return (
