@@ -36,7 +36,7 @@ let initialState = {
       friendAvatar:
         "https://sun1.beltelecom-by-minsk.userapi.com/jAfPXNexKdF5JrShydoME16K-bcW6D80uphBug/LuiKmPUymTY.jpg?ava=1",
     },
-  ],
+  ]
 };
 
 let friendsReducer = (state = initialState, action) => {

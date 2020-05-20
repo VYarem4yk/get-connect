@@ -25,7 +25,7 @@ let initialState = {
   curentPostText: "",
 };
 
-const profileReducer = (state = initialState, action) => {
+const profileReducer = (state=in, action) => {
   switch (action.type) {
     case ADD_POST:
       let newPost = {

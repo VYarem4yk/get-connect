@@ -1,5 +1,5 @@
 let initialState = {
-  friends: [
+  Friends: [
     {
       friendId: 1,
       friendName: "Katarzyna",

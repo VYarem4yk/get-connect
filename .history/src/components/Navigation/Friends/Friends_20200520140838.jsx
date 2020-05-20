@@ -2,7 +2,8 @@ import React from "react";
 import "./Friends.css";
 
 const Friends = (props) => {
-  return props.store.getState().friends.friends.map((friend) => {
+  
+  return props.store.getState().friends.map((friend) => {
     return (
       <div className="friend">
         <img

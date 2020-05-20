@@ -20,9 +20,9 @@ let initialState = {
     { id: "5", text: "Крутяк", owner: "messageYour" },
   ],
   curentMessageText: "",
-};
+}
 
-const dialogsReducer = (state = initialState, action) => {
+const dialogsReducer = (state=in, action) => {
   switch (action.type) {
     case UPDATE_TEXT_MESSAGE:
       state.curentMessageText = action.body;
