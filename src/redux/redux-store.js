@@ -6,7 +6,7 @@ import friendsReducer from "./friendsReducer";
 let reducers = combineReducers({
   profilePage: profileReducer,
   dialogsPage: dialogsReducer,
-  friends: friendsReducer,
+  friendsBar: friendsReducer,
 });
 
 export let store = createStore(reducers);
