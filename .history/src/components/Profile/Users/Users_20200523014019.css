@@ -1,0 +1,9 @@
+.userWrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.userAvatar{
+ height: 70px;
+ width 
+}

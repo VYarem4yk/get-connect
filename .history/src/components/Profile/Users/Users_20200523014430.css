@@ -1,0 +1,15 @@
+.userWrapper {
+  padding-left: 10px;
+  padding: ;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.userAvatar {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+}
+
+.userName {
+}
