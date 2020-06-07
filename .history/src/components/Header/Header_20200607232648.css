@@ -1,0 +1,37 @@
+.app-header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 35px;
+  background-color: rgba(197, 194, 194, 0.4);
+}
+
+@font-face {
+  font-family: "Logo";
+  src: url("../../fonts/Logo.otf");
+}
+
+.logo {
+  font-family: "Logo";
+  font-size: 80px;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.authorisation a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.authorisation {
+  font-size: 2vh;
+  padding-right: 5px;
+}
+
+.login a:hover{
+  font-family: "Logo";
+  color: ;
+}
