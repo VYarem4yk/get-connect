@@ -51,10 +51,9 @@ let Users = (props) => {
                     className="buttonFollower"
                     onClick={() => {
                       Axios.delete(
-                        `https://social-network.samuraijs.com/api/1.0/follow/${user.id}`,
-                        {
+                        `https://social-network.samuraijs.com/api/1.0/follow/${user.id}`,{
                           withCredentials: true,
-
+                       
                           headers: {
                             "API-KEY": "33da53e4-fe0b-47ff-91cd-c7c0aee9ed04",
                           },
@@ -74,7 +73,6 @@ let Users = (props) => {
                     onClick={() => {
                       Axios.post(
                         `https://social-network.samuraijs.com/api/1.0/follow/${user.id}`,
-                        {},
                         {
                           withCredentials: true,
                           headers: {
@@ -82,6 +80,7 @@ let Users = (props) => {
                           },
                         }
                       ).then((response) => {
+                        debugger;
                         if (response.data.resultCode == 0) {
                           props.follow(user.id);
                         }

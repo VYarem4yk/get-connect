@@ -27,11 +27,9 @@ class UsersInfoContainer extends Component {
     this.props.setCurentPage(page);
     this.props.toggleIsLoading(true);
     Axios.get(
-      `https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`,
-      {
+      `https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`,{
         withCredentials: true,
-      }
-    ).then((response) => {
+      }).then((response) => {
       this.props.toggleIsLoading(false);
       this.props.setUsers(response.data.items);
       this.props.countTotalUsers(response.data.totalCount);

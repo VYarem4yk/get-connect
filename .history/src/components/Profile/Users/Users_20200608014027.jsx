@@ -1,7 +1,7 @@
 import "./Users.css";
 import React from "react";
 import userPhoto from "../../../images/userPhoto.png";
-import Axios from "axios";
+
 import { NavLink } from "react-router-dom";
 import Preloader from "../../Preloader/Preloader";
 
@@ -54,9 +54,8 @@ let Users = (props) => {
                         `https://social-network.samuraijs.com/api/1.0/follow/${user.id}`,
                         {
                           withCredentials: true,
-
                           headers: {
-                            "API-KEY": "33da53e4-fe0b-47ff-91cd-c7c0aee9ed04",
+                            "API-KEY": "c475d5d1-905f-4b5c-8d9d-7f6008a6fc08",
                           },
                         }
                       ).then((response) => {
@@ -72,13 +71,12 @@ let Users = (props) => {
                   <button
                     className="buttonFollower"
                     onClick={() => {
-                      Axios.post(
+                      Axios.put(
                         `https://social-network.samuraijs.com/api/1.0/follow/${user.id}`,
-                        {},
                         {
                           withCredentials: true,
                           headers: {
-                            "API-KEY": "33da53e4-fe0b-47ff-91cd-c7c0aee9ed04",
+                            "API-KEY": "c475d5d1-905f-4b5c-8d9d-7f6008a6fc08",
                           },
                         }
                       ).then((response) => {

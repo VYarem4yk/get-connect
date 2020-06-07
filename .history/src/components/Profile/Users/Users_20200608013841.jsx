@@ -1,7 +1,7 @@
 import "./Users.css";
 import React from "react";
 import userPhoto from "../../../images/userPhoto.png";
-import Axios from "axios";
+
 import { NavLink } from "react-router-dom";
 import Preloader from "../../Preloader/Preloader";
 
@@ -53,11 +53,8 @@ let Users = (props) => {
                       Axios.delete(
                         `https://social-network.samuraijs.com/api/1.0/follow/${user.id}`,
                         {
-                          withCredentials: true,
-
-                          headers: {
-                            "API-KEY": "33da53e4-fe0b-47ff-91cd-c7c0aee9ed04",
-                          },
+                          withCredentials: true ,
+                          headers: {"API-KEY":}
                         }
                       ).then((response) => {
                         if (response.data.resultCode == 0) {
@@ -72,20 +69,7 @@ let Users = (props) => {
                   <button
                     className="buttonFollower"
                     onClick={() => {
-                      Axios.post(
-                        `https://social-network.samuraijs.com/api/1.0/follow/${user.id}`,
-                        {},
-                        {
-                          withCredentials: true,
-                          headers: {
-                            "API-KEY": "33da53e4-fe0b-47ff-91cd-c7c0aee9ed04",
-                          },
-                        }
-                      ).then((response) => {
-                        if (response.data.resultCode == 0) {
-                          props.follow(user.id);
-                        }
-                      });
+                      props.follow(user.id);
                     }}
                   >
                     Follow

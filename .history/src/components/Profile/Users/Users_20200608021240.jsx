@@ -73,15 +73,14 @@ let Users = (props) => {
                     className="buttonFollower"
                     onClick={() => {
                       Axios.post(
-                        `https://social-network.samuraijs.com/api/1.0/follow/${user.id}`,
-                        {},
+                        `https://social-network.samuraijs.com/api/1.0/follow/${user.id}`,{}
                         {
                           withCredentials: true,
                           headers: {
                             "API-KEY": "33da53e4-fe0b-47ff-91cd-c7c0aee9ed04",
                           },
                         }
-                      ).then((response) => {
+                      ).then((response) => {                   
                         if (response.data.resultCode == 0) {
                           props.follow(user.id);
                         }
