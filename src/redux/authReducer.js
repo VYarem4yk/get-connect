@@ -1,3 +1,5 @@
+import { authorisationAPI } from "../api/api";
+
 const SET = "SET";
 
 let initialState = {
@@ -24,5 +26,16 @@ export const setAuthorisation = (id, login, email) => ({
   type: SET_AUTHORISATION,
   data: { id, login, email },
 });
+
+export const login = () => {
+  return (dispatch) => {
+    authorisationAPI.login().then((data) => {
+      if (data.resultCode === 0) {
+        let { id, login, email } = data.data;
+        dispatch(setAuthorisation(id, login, email));
+      }
+    });
+  };
+};
 
 export default authReducer;

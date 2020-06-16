@@ -1,41 +1,19 @@
 import { connect } from "react-redux";
 import Users from "./Users";
-import Axios from "axios";
 import React, { Component } from "react";
 import {
   follow,
   unFollow,
-  setUsers,
-  countTotalUsers,
   setCurentPage,
-  toggleIsLoading,
+  getUsers,
 } from "../../../redux/usersReducer";
 
 class UsersInfoContainer extends Component {
   componentDidMount() {
-    Axios.get(
-      `https://social-network.samuraijs.com/api/1.0/users?page=${this.props.curentPage}&count=${this.props.pageSize}`,
-      {
-        withCredentials: true,
-      }
-    ).then((response) => {
-      this.props.setUsers(response.data.items);
-      this.props.countTotalUsers(response.data.totalCount);
-    });
+    this.props.getUsers(this.props.curentPage, this.props.pageSize);
   }
   onPageChanged = (page) => {
-    this.props.setCurentPage(page);
-    this.props.toggleIsLoading(true);
-    Axios.get(
-      `https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`,
-      {
-        withCredentials: true,
-      }
-    ).then((response) => {
-      this.props.toggleIsLoading(false);
-      this.props.setUsers(response.data.items);
-      this.props.countTotalUsers(response.data.totalCount);
-    });
+    this.props.getUsers(page, this.props.pageSize);
   };
 
   render() {
@@ -49,6 +27,9 @@ class UsersInfoContainer extends Component {
         totalCount={this.props.totalCount}
         pageSize={this.props.pageSize}
         isLoading={this.props.isLoading}
+        toggleIsFollowingEnabled={this.props.toggleIsFollowingEnabled}
+        isFollowingEnabled={this.props.isFollowingEnabled}
+        followingDisabledUserID={this.props.followingDisabledUserID}
       />
     );
   }
@@ -61,16 +42,16 @@ const mapStateToProps = (state) => {
     curentPage: state.usersPage.curentPage,
     pageSize: state.usersPage.pageSize,
     isLoading: state.usersPage.isLoading,
+    isFollowingEnabled: state.usersPage.isFollowingEnabled,
+    followingDisabledUserID: state.usersPage.followingDisabledUserID,
   };
 };
 
 const mapDispatchToProps = {
   follow,
   unFollow,
-  setUsers,
-  countTotalUsers,
   setCurentPage,
-  toggleIsLoading,
+  getUsers,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UsersInfoContainer);

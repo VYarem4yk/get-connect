@@ -1,7 +1,6 @@
 import React from "react";
 import "./Header.css";
 const Header = (props) => {
-  debugger;
   return (
     <header className="app-header">
       <div className="logo-wrapper">
